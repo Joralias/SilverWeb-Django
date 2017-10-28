@@ -1,0 +1,329 @@
+{% extends 'web/base.html' %}
+{% load staticfiles %}
+
+{% block class_tab_index %}current-menu-item{% endblock %}
+
+{% block content %}
+
+    <div class="hero">
+        <div class="slider">
+            <ul class="slides">
+                <li class="lazy-bg" data-background='{% static "images/slide-1.jpg" %}'>
+                    <div class="container">
+                        <img src='{% static "images/bandlogo.png" %}' class="bandlogo"} alt="Site Title">
+                    </div>
+                </li>
+                <li class="lazy-bg" data-background='{% static "images/slide-2.jpg" %}'>
+                    <div class="container">
+                        <img src='{% static "images/bandlogo.png" %}' class="bandlogo" alt="Site Title">
+                    </div>
+                </li>
+                <li class="lazy-bg" data-background='{% static "images/slide-3.jpg" %}'>
+                    <div class="container">
+                        <img src='{% static "images/bandlogo.png" %}' class="bandlogo" alt="Site Title">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="fullwidth-block testimonial-section">
+            <div class="container">
+                <div class="quote-slider">
+                    <ul class="slides">
+                        <li>
+                            <blockquote>
+                                <p>"Music is .... "</p>
+                                <cite>Maw</cite>
+                                <span>Drummer</span>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <blockquote>
+                                <p>"Silverwave ... "</p>
+                                <cite>Sartas</cite>
+                                <span>Singer & Guitar</span>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <blockquote>
+                                <p>"Music is ..."</p>
+                                <cite>Ali</cite>
+                                <span>Bass & BackVocals</span>
+                            </blockquote>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- .testimonial-section -->
+
+        <div class="fullwidth-block upcoming-event-section" data-bg-color="#191919">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Upcoming events</h2>
+
+                    <div class="event-nav">
+                        <a class="prev" id="event-prev" href="#"><i class="fa fa-caret-left"></i></a>
+                        <a class="next" id="event-next" href="#"><i class="fa fa-caret-right"></i></a>
+                    </div> <!-- .event-nav -->
+
+                </header> <!-- .section-header -->
+                <div class="event-carousel">
+
+                    <div class="event">
+                        <div class="entry-date">
+                            <div class="date">29</div>
+                            <span class="month">Feb</span>
+                        </div>
+                        <h2 class="entry-title"><a href="#">Palacio de los Deportes</a></h2>
+                        <p>Junto con Rise Against y NoFX</p>
+                    </div> <!-- .event -->
+
+
+                    <div class="event">
+                        <div class="entry-date">
+                            <div class="date">13</div>
+                            <span class="month">Mar</span>
+                        </div>
+                        <h2 class="entry-title"><a href="#">Santiago Bernabeu</a></h2>
+                        <p>Concierto presentación del primer EP</p>
+                    </div> <!-- .event -->
+
+
+                    <div class="event">
+                        <div class="entry-date">
+                            <div class="date">1</div>
+                            <span class="month">Ago</span>
+                        </div>
+                        <h2 class="entry-title"><a href="#">Resurrection Festival</a></h2>
+                        <p></p>
+                    </div> <!-- .event -->
+
+
+                    <div class="event">
+                        <div class="entry-date">
+                            <div class="date">8</div>
+                            <span class="month">Sep</span>
+                        </div>
+                        <h2 class="entry-title"><a href="#">Concierto Benefico</a></h2>
+                        <p>Sala Heineken Madrid</p>
+                    </div> <!-- .event -->
+
+
+                    <div class="event">
+                        <div class="entry-date">
+                            <div class="date">25</div>
+                            <span class="month">Oct</span>
+                        </div>
+                        <h2 class="entry-title"><a href="#">Groezrock</a></h2>
+                        <p></p>
+                    </div> <!-- .event -->
+
+                </div> <!-- .event-carousel -->
+            </div> <!-- .container -->
+        </div> <!-- .upcoming-event-section -->
+    </main> <!-- .main-content -->
+{% endblock %}
+
+
+<!--{% load staticfiles %}-->
+<!--<html lang="en">-->
+	<!--<head>-->
+		<!--<meta charset="UTF-8">-->
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">-->
+		<!---->
+		<!--<title>SilverWave Madrid</title>-->
+		<!--&lt;!&ndash; Loading third party fonts &ndash;&gt;-->
+		<!--<link href="http://fonts.googleapis.com/css?family=Droid+Sans|Passion+One|Permanent+Marker:300,400,600,700,900" rel="stylesheet" type="text/css">-->
+		<!--<link href='{% static "fonts/font-awesome.min.css" %}' rel="stylesheet" type="text/css">-->
+		<!--&lt;!&ndash; Loading main css file &ndash;&gt;-->
+		<!--<link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+
+
+		<!--&lt;!&ndash;[if lt IE 9]>-->
+		<!--<script src='{% static "js/ie-support/html5.js" %}'></script>-->
+		<!--<script src='{% static "js/ie-support/respond.js" %}'></script>-->
+		<!--<![endif]&ndash;&gt;-->
+
+	<!--</head>-->
+
+	<!--<body class="header-collapse">-->
+
+		<!--<div id="site-content">-->
+			<!--<header class="site-header">-->
+				<!--<div class="container">-->
+					<!--<a href="index.html" id="branding">-->
+						<!--<img src='{% static "images/small_logo.png" %}' height="28" width="28" alt="Site Title">-->
+					<!--</a> &lt;!&ndash; #branding &ndash;&gt;-->
+					<!---->
+					<!--<nav class="main-navigation">-->
+						<!--<button type="button" class="toggle-menu"><i class="fa fa-bars"></i></button>-->
+						<!--<ul class="menu">-->
+							<!--<li class="menu-item current-menu-item"><a href="index.html">Home</a></li>-->
+							<!--<li class="menu-item"><a href="about.html">About</a></li>-->
+							<!--<li class="menu-item"><a href="gallery.html">Gallery</a></li>-->
+							<!--<li class="menu-item"><a href="download.html">Download</a></li>-->
+							<!--<li class="menu-item"><a href="blog.html">Blog</a></li>-->
+							<!--<li class="menu-item"><a href="contact.html">Contact</a></li>-->
+						<!--</ul> &lt;!&ndash; .menu &ndash;&gt;-->
+					<!--</nav> &lt;!&ndash; .main-navigation &ndash;&gt;-->
+					<!--<div class="mobile-menu"></div>-->
+				<!--</div>-->
+			<!--</header> &lt;!&ndash; .site-header &ndash;&gt;-->
+			<!---->
+			<!--<div class="hero">-->
+				<!--<div class="slider">-->
+					<!--<ul class="slides">-->
+						<!--<li class="lazy-bg" data-background='{% static "images/slide-1.jpg" %}'>-->
+							<!--<div class="container">-->
+								<!--<img src='{% static "images/bandlogo.png" class="bandlogo" %}' alt="Site Title">-->
+							<!--</div>-->
+						<!--</li>-->
+						<!--<li class="lazy-bg" data-background='{% static "images/slide-2.jpg" %}'>-->
+							<!--<div class="container">-->
+								<!--<img src='{% static "images/bandlogo.png" %}' class="bandlogo" alt="Site Title">-->
+							<!--</div>-->
+						<!--</li>-->
+						<!--<li class="lazy-bg" data-background='{% static "images/slide-3.jpg" %}'>-->
+							<!--<div class="container">-->
+								<!--<img src='{% static "images/bandlogo.png" %}' class="bandlogo" alt="Site Title">-->
+							<!--</div>-->
+						<!--</li>-->
+					<!--</ul>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!---->
+			<!--<main class="main-content">-->
+				<!--<div class="fullwidth-block testimonial-section">-->
+					<!--<div class="container">-->
+						<!--<div class="quote-slider">-->
+							<!--<ul class="slides">-->
+								<!--<li>-->
+									<!--<blockquote>-->
+										<!--<p>"Music is .... "</p>-->
+										<!--<cite>Maw</cite>-->
+										<!--<span>Drummer</span>-->
+									<!--</blockquote>-->
+								<!--</li>-->
+								<!--<li>-->
+									<!--<blockquote>-->
+										<!--<p>"Silverwave ... "</p>-->
+										<!--<cite>Sartas</cite>-->
+										<!--<span>Singer & Guitar</span>-->
+									<!--</blockquote>-->
+								<!--</li>-->
+								<!--<li>									-->
+									<!--<blockquote>-->
+										<!--<p>"Music is ..."</p>-->
+										<!--<cite>Ali</cite>-->
+										<!--<span>Bass & BackVocals</span>-->
+									<!--</blockquote>-->
+								<!--</li>-->
+							<!--</ul>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div> &lt;!&ndash; .testimonial-section &ndash;&gt;-->
+
+				<!--<div class="fullwidth-block upcoming-event-section" data-bg-color="#191919">-->
+					<!--<div class="container">-->
+						<!--<header class="section-header">-->
+							<!--<h2 class="section-title">Upcoming events</h2>-->
+
+							<!--<div class="event-nav">-->
+								<!--<a class="prev" id="event-prev" href="#"><i class="fa fa-caret-left"></i></a>-->
+	    						<!--<a class="next" id="event-next" href="#"><i class="fa fa-caret-right"></i></a>-->
+							<!--</div> &lt;!&ndash; .event-nav &ndash;&gt;-->
+
+						<!--</header> &lt;!&ndash; .section-header &ndash;&gt;-->
+						<!--<div class="event-carousel">-->
+							<!---->
+							<!--<div class="event">-->
+								<!--<div class="entry-date">-->
+									<!--<div class="date">29</div>-->
+									<!--<span class="month">Feb</span>-->
+								<!--</div>-->
+								<!--<h2 class="entry-title"><a href="#">Palacio de los Deportes</a></h2>-->
+								<!--<p>Junto con Rise Against y NoFX</p>-->
+							<!--</div> &lt;!&ndash; .event &ndash;&gt;-->
+							<!---->
+							<!---->
+							<!--<div class="event">-->
+								<!--<div class="entry-date">-->
+									<!--<div class="date">13</div>-->
+									<!--<span class="month">Mar</span>-->
+								<!--</div>-->
+								<!--<h2 class="entry-title"><a href="#">Santiago Bernabeu</a></h2>-->
+								<!--<p>Concierto presentación del primer EP</p>-->
+							<!--</div> &lt;!&ndash; .event &ndash;&gt;-->
+							<!---->
+							<!---->
+							<!--<div class="event">-->
+								<!--<div class="entry-date">-->
+									<!--<div class="date">1</div>-->
+									<!--<span class="month">Ago</span>-->
+								<!--</div>-->
+								<!--<h2 class="entry-title"><a href="#">Resurrection Festival</a></h2>-->
+								<!--<p></p>-->
+							<!--</div> &lt;!&ndash; .event &ndash;&gt;-->
+							<!---->
+							<!---->
+							<!--<div class="event">-->
+								<!--<div class="entry-date">-->
+									<!--<div class="date">8</div>-->
+									<!--<span class="month">Sep</span>-->
+								<!--</div>-->
+								<!--<h2 class="entry-title"><a href="#">Concierto Benefico</a></h2>-->
+								<!--<p>Sala Heineken Madrid</p>-->
+							<!--</div> &lt;!&ndash; .event &ndash;&gt;-->
+							<!---->
+							<!---->
+							<!--<div class="event">-->
+								<!--<div class="entry-date">-->
+									<!--<div class="date">25</div>-->
+									<!--<span class="month">Oct</span>-->
+								<!--</div>-->
+								<!--<h2 class="entry-title"><a href="#">Groezrock</a></h2>-->
+								<!--<p></p>-->
+							<!--</div> &lt;!&ndash; .event &ndash;&gt;-->
+							<!---->
+						<!--</div> &lt;!&ndash; .event-carousel &ndash;&gt;-->
+					<!--</div> &lt;!&ndash; .container &ndash;&gt;-->
+				<!--</div> &lt;!&ndash; .upcoming-event-section &ndash;&gt;-->
+			<!--</main> &lt;!&ndash; .main-content &ndash;&gt;-->
+
+			<!--<footer class="site-footer">-->
+				<!--<div class="container">-->
+					<!--<img src='{% static "images/bandlogo.png" %}' class="bandlogo-small" alt="Site Name">-->
+					<!---->
+					<!--<address>-->
+						<!--<p><a href="tel:777777777">777777777</a> <br> <a href="mailto:silverwavemadrid@gmail.com">silverwavemadrid@gmail.com</a></p> -->
+					<!--</address> -->
+					<!---->
+					<!--<form id="mailForm" action="./storemail.php" method="post" class="newsletter-form">-->
+						<!--<input name ="email" type="email" placeholder="Enter your email to join newsletter...">-->
+						<!--<input type="submit" class="button cut-corner" value="Subscribe">-->
+					<!--</form> &lt;!&ndash; .newsletter-form &ndash;&gt;-->
+					<!---->
+					<!--<div class="social-links">-->
+						<!--<a href="#"><i class="fa fa-facebook-square"></i></a>-->
+						<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+						<!--<a href="#"><i class="fa fa-google-plus"></i></a>-->
+						<!--<a href="#"><i class="fa fa-pinterest"></i></a>-->
+					<!--</div> &lt;!&ndash; .social-links &ndash;&gt;-->
+					<!---->
+					<!--<p class="copy">Copyright 2016 Silverwave. Designed by JorAlias. All right reserved</p>-->
+				<!--</div>-->
+			<!--</footer> &lt;!&ndash; .site-footer &ndash;&gt;-->
+
+		<!--</div> &lt;!&ndash; #site-content &ndash;&gt;-->
+
+		<!--<script src='{% static "js/jquery-1.11.1.min.js" %}'></script>-->
+		<!--<script src='{% static "js/plugins.js" %}'></script>-->
+		<!--<script src='{% static "js/app.js" %}'></script>-->
+
+
+	<!--</body>-->
+
+<!--</html>-->

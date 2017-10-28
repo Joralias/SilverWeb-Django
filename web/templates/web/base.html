@@ -1,0 +1,92 @@
+
+{% load staticfiles %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+		<title>SilverWave Madrid</title>
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans|Passion+One|Permanent+Marker:300,400,600,700,900" rel="stylesheet" type="text/css">
+		<link href='{% static "fonts/font-awesome.min.css" %}' rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+		<!--[if lt IE 9]>
+		<script src='{% static "js/ie-support/html5.js" %}'></script>
+		<script src='{% static "js/ie-support/respond.js" %}'></script>
+		<![endif]-->
+
+	</head>
+
+    {% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+	<body class="header-collapse">
+
+		<div id="site-content">
+			<header class="site-header">
+				<div class="container">
+					<a href="index.html" id="branding">
+						<img src='{% static "images/small_logo.png" %}' height="28" width="28" alt="Site Title">
+					</a> <!-- #branding -->
+
+					<nav class="main-navigation">
+						<button type="button" class="toggle-menu"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item {% block class_tab_index %}{% endblock %}"><a href="index.html">Home</a></li>
+							<li class="menu-item {% block class_tab_about %}{% endblock %}"><a href="about.html">About</a></li>
+							<li class="menu-item {% block class_tab_gallery %}{% endblock %}"><a href="gallery.html">Gallery</a></li>
+							<li class="menu-item {% block class_tab_download %}{% endblock %}"><a href="download.html">Download</a></li>
+							<li class="menu-item {% block class_tab_blog %}{% endblock %}"><a href="blog.html">Blog</a></li>
+							<li class="menu-item {% block class_tab_contact %}{% endblock %}"><a href="contact.html">Contact</a></li>
+						</ul> <!-- .menu -->
+					</nav> <!-- .main-navigation -->
+					<div class="mobile-menu"></div>
+				</div>
+			</header> <!-- .site-header -->
+
+            {% block content %}
+            {% endblock %}
+
+			<footer class="site-footer">
+				<div class="container">
+					<img src='{% static "images/bandlogo.png" %}' class="bandlogo-small" alt="Site Name">
+
+					<address>
+						<p><a href="tel:777777777">777777777</a> <br> <a href="mailto:silverwavemadrid@gmail.com">silverwavemadrid@gmail.com</a></p>
+					</address>
+
+     				<form id="mailForm" method='POST' action='/store_mail/' class="newsletter-form">{% csrf_token %}
+						<input name ="mail" type="email" placeholder="Enter your email to join newsletter...">
+						<input type="submit" class="button cut-corner" value="Subscribe">
+					</form> <!-- .newsletter-form -->
+
+					<div class="social-links">
+						<a href="#"><i class="fa fa-facebook-square"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+					</div> <!-- .social-links -->
+
+					<p class="copy">Copyright 2016 Silverwave. Designed by JorAlias. All right reserved</p>
+				</div>
+			</footer> <!-- .site-footer -->
+
+		</div> <!-- #site-content -->
+
+		<script src='{% static "js/jquery-1.11.1.min.js" %}'></script>
+		<script src='{% static "js/plugins.js" %}'></script>
+		<script src='{% static "js/app.js" %}'></script>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,62 @@
+{% extends 'web/base.html' %}
+{% load staticfiles %}
+
+{% block class_tab_gallery %}current-menu-item{% endblock %}
+
+{% block content %}
+			
+	<main class="main-content">
+		<div class="fullwidth-block gallery">
+			<div class="container">
+				<div class="content fullwidth">
+					<h2 class="entry-title">Gallery</h2>
+					<div class="filter-links filterable-nav">
+						<select class="mobile-filter">
+							<option value="*">Show all</option>
+							<option value=".concert">Concert</option>
+							<option value=".band">Band</option>
+							<option value=".video">Video</option>
+							<option value=".stuff">Stuff</option>
+						</select>
+						<a href="#" class="current" data-filter="*">Show all</a>
+						<a href="#" data-filter=".concert">Concert</a>
+						<a href="#" data-filter=".band">Band</a>
+						<a href="#" data-filter=".video">Video</a>
+						<a href="#" data-filter=".stuff">Stuff</a>
+					</div>
+					<div class="filterable-items">
+						<div class="filterable-item band">
+							<a href='{% static "images/large-gallery/jaime-1.jpg" %}'><figure><img src='{% static "images/jaime-1.jpg" %}' alt="jaime-1"></figure></a>
+						</div>
+						<div class="filterable-item concert">
+							<a href='{% static "images/large-gallery/band-1.jpg" %}'><figure><img src='{% static "images/band-1.jpg" %}' alt="band1"></figure></a>
+						</div>
+						<div class="filterable-item concert">
+							<a href='{% static "images/large-gallery/maw-2.jpg" %}'><figure><img src='{% static "images/maw-2.jpg" %}' alt="maw-2"></figure></a>
+						</div>
+						<div class="filterable-item stuff">
+							<a href='{% static "images/large-gallery/ali-1.jpg" %}'><figure><img src='{% static "images/ali-1.jpg" %}' alt="ali-1"></figure></a>
+						</div>
+						<div class="filterable-item concert">
+							<a href='{% static "images/large-gallery/jaime-2.jpg" %}'><figure><img src='{% static "images/jaime-2.jpg" %}' alt="jaime-2"></figure></a>
+						</div>
+						<div class="filterable-item band">
+							<a href='{% static "images/large-gallery/maw-3.jpg" %}'><figure><img src='{% static "images/maw-3.jpg" %}' alt="maw-3"></figure></a>
+						</div>
+						<div class="filterable-item band">
+							<a href='{% static "images/large-gallery/ali-2.jpg" %}'><figure><img src='{% static "images/ali-2.jpg" %}' alt="ali-2"></figure></a>
+						</div>
+						<div class="filterable-item band">
+							<a href='{% static "images/large-gallery/jaime-5.jpg" %}'><figure><img src='{% static "images/jaime-5.jpg" %}' alt="jaime-5"></figure></a>
+						</div>
+						<div class="filterable-item video">
+							<a> <video src='{% static "video/StopWarBassPOV.AVI" %}'></video>><figure><video src='{% static "video/StopWarBassPOV.AVI" %}'></video></figure></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .testimonial-section -->
+
+
+	</main> <!-- .main-content -->
+{% endblock %}

@@ -1,0 +1,9 @@
+.idea/
+Html_template/
+myvenv/
+*.pyc
+web/static/audio/
+web/static/images/
+web/static/video/
+db.sqlite3
+

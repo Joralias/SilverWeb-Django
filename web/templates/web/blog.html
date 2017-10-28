@@ -1,0 +1,54 @@
+{% extends 'web/base.html' %}
+{% load staticfiles %}
+
+{% block class_tab_blog %}current-menu-item{% endblock %}
+
+{% block content %}
+			
+	<main class="main-content">
+		<div class="fullwidth-block inner-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="content">
+							<h2 class="entry-title">Blog</h2>
+
+							<div class="post">
+								<div class="entry-date">
+									<div class="date">21</div>
+									<span class="month">Dic</span>
+								</div>
+								<div class="featured-image">
+									<img src='{% static "images/launch_icon.png" %}' alt="">
+								</div>
+								<h2 class="entry-title"><a href="#">Lanzamiento de la nueva Web</a></h2>
+								<p>En breves os anunciaremos el lanzamiento de la web de SILVERWAVE. ¡Estad atentos!</p>
+								<a href="#">Read more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-push-1">
+						<aside class="sidebar">
+							<div class="widget">
+								<h3 class="widget-title">Discography</h3>
+								<ul class="discography-list">
+									<li>
+										<figure class="cover"><img src='{% static "images/thumbnail-EP1.jpg" %}' alt="thumbnail EP1"></figure>
+										<div class="detail">
+											<h3><a href="#">Rebellion</a></h3>
+											<span class="year">2017</span>
+											<span class="track">12 tracks</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .testimonial-section -->
+
+
+	</main> <!-- .main-content -->
+
+{% endblock %}
