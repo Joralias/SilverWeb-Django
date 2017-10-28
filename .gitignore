@@ -6,4 +6,4 @@ web/static/audio/
 web/static/images/
 web/static/video/
 db.sqlite3
-
+silverweb/settings.py
