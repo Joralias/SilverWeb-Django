@@ -13,8 +13,8 @@ from .models import (
 )
 
 
-def index(request):
-    return render(request, 'web/index.html', {})
+def home(request):
+    return render(request, 'web/home.html', {})
 
 
 def about(request):
@@ -55,9 +55,9 @@ def new_fan(request):
             else:
                 messages.info(request, 'You are already registered :) !')
                 pass
-            return redirect('index')
+            return redirect('home')
     else:
-        return render(request, 'web/index.html')
+        return render(request, 'web/home.html')
 
 
 def new_message(request):
@@ -82,7 +82,7 @@ def new_message(request):
                 # if not yet registered, do it!
                 Fan.objects.create(mail=post.mail)
 
-            return redirect('index')
+            return redirect('home')
     else:
-        return render(request, 'web/index.html')
+        return render(request, 'web/home.html')
 
