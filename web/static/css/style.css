@@ -74,7 +74,7 @@ h1 {
 /* line 165, sass/libs/_normalize.scss */
 h2 {
   font-size: 1.5em;
-  margin: 0.83em 0;
+  margin: 1.83em 0;
   line-height: normal; }
 
 /* line 171, sass/libs/_normalize.scss */
@@ -2079,7 +2079,7 @@ body {
 
 /* line 2, sass/layout/_sidebar.scss */
 .widget .widget-title {
-  margin-top: 0;
+  margin-top: 1.83em;
   margin-bottom: 30px;
   font-size: 36px;
   font-size: 2.25em;
@@ -2513,7 +2513,7 @@ body {
 
 /* line 6, sass/pages/_post.scss */
 .content .entry-title {
-  margin-top: 0;
+  margin-top: 1.83em;
   margin-bottom: 30px;
   font-size: 36px;
   font-size: 2.25em;
